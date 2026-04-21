@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Event, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TitleService } from './services/title.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,6 @@ import { TitleService } from './services/title.service';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-  
 export class App {
   constructor(
     private router: Router,
@@ -16,6 +16,7 @@ export class App {
   ) {}
 
   ngOnInit() {
+    AOS.init();
     this.titleService.init();
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {

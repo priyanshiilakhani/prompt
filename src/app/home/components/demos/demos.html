@@ -7,75 +7,14 @@
             <p class="text-default-500 mb-14">Modern landing pages available for every need</p>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
-            <a href="home-app.html" target="_blank">
+            @for (item of demoData.slice(0, 10); track $index) {
+            <a [routerLink]="item.link" target="_blank">
                 <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-app.jpg">
+                    <img [src]="item.image">
                 </div>
-                <h4 class="text-base text-center mt-4">Mobile App</h4>
+                <h4 class="text-base text-center mt-4">{{item.label}}</h4>
             </a>
-
-            <a href="home-saas.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-saas.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Saas Modern</h4>
-            </a>
-
-            <a href="home-saas2.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-saas2.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Saas Classic</h4>
-            </a>
-
-            <a href="home-startup.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-startup.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Startup</h4>
-            </a>
-
-            <a href="home-software.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-software.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Software</h4>
-            </a>
-
-            <a href="home-agency.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-agency.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Agency</h4>
-            </a>
-
-            <a href="home-coworking.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-coworking.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Co-Working</h4>
-            </a>
-
-            <a href="home-crypto.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-crypto.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Crypto</h4>
-            </a>
-
-            <a href="home-marketing.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-marketing.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Marketing</h4>
-            </a>
-
-            <a href="home-portfolio.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/home-portfolio.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Portfolio</h4>
-            </a>
+            }
         </div>
     </div>
 </section>
@@ -90,19 +29,14 @@
             <p class="text-default-500 mb-14">Modern landing pages available for every need</p>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
-            <a href="account-dashboard.html" target="_blank">
+            @for (item of demoData.slice(10, 12); track $index) {
+            <a [routerLink]="item.link" target="_blank">
                 <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/dashboard.png">
+                    <img [src]="item.image">
                 </div>
-                <h4 class="text-base text-center mt-4">Dashboard</h4>
+                <h4 class="text-base text-center mt-4">{{item.label}}</h4>
             </a>
-
-            <a href="account-settings.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/account.png">
-                </div>
-                <h4 class="text-base text-center mt-4">Account Settings</h4>
-            </a>
+            }
         </div>
     </div>
 </section>
@@ -116,75 +50,14 @@
             <h1 class="text-4xl mt-4 mb-14">Inner Pages</h1>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
-            <a href="company.html" target="_blank">
+            @for (item of demoData.slice(12, 22); track $index) {
+            <a [routerLink]="item.link" target="_blank">
                 <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/company.jpg">
+                    <img [src]="item.image">
                 </div>
-                <h4 class="text-base text-center mt-4">Company</h4>
+                <h4 class="text-base text-center mt-4">{{item.label}}</h4>
             </a>
-
-            <a href="contact.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/contact.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Contact</h4>
-            </a>
-
-            <a href="career.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/career.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Career</h4>
-            </a>
-
-            <a href="blog.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/blog.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Blog</h4>
-            </a>
-
-            <a href="blog-post.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/blog-post.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Blog Post</h4>
-            </a>
-
-            <a href="portfolio-grid.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/portfolio-grid.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Portfolio Grid</h4>
-            </a>
-
-            <a href="portfolio-masonry.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/portfolio-masonry.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Portfolio Masonry</h4>
-            </a>
-
-            <a href="portfolio-item.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/portfolio-item.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Portfolio Item</h4>
-            </a>
-
-            <a href="pricing.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/pricing.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Pricing</h4>
-            </a>
-
-            <a href="help.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/help.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Help</h4>
-            </a>
+            }
         </div>
     </div>
 </section>
@@ -199,33 +72,14 @@
         </div>
 
         <div class="grid md:grid-cols-2 grid-cols-1 gap-6" data-aos="fade-up" data-duration="600">
-            <a href="account-login.html" target="_blank">
+            @for (item of demoData.slice(22, 26); track $index) {
+            <a [routerLink]="item.link" target="_blank">
                 <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/auth-login.jpg">
+                    <img [src]="item.image">
                 </div>
-                <h4 class="text-base text-center mt-4">Login</h4>
+                <h4 class="text-base text-center mt-4">{{item.label}}</h4>
             </a>
-
-            <a href="account-signup.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/auth-signup.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Signup</h4>
-            </a>
-
-            <a href="account-forget-password.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/auth-password.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Forget Password</h4>
-            </a>
-
-            <a href="account-confirm.html" target="_blank">
-                <div class="border border-default-200 p-2 rounded">
-                    <img src="assets/images/demo/auth-confirm.jpg">
-                </div>
-                <h4 class="text-base text-center mt-4">Confirm Account</h4>
-            </a>
+            }
         </div>
     </div>
 </section>

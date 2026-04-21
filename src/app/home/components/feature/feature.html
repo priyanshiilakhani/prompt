@@ -8,9 +8,10 @@
         </div>
 
         <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="600">
+            @for (item of featuresData; track $index) {
+            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" [attr.data-duration]="item.duration">
                 <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
+                    @if (item.iconType === 'svg') {
                     <svg class="size-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
                         <g clip-path="url(#prefix__clip0)">
                             <path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd" />
@@ -21,61 +22,21 @@
                             </clipPath>
                         </defs>
                     </svg>
+                    }
+                    @else {
+                    <iconify-icon [icon]="item.icon" class="text-primary" height="24" width="24"></iconify-icon>
+                    }
                 </span>
-                <h5>Based on latest Tailwind v3.4.14</h5>
+                <h5> @if (item.link) {
+                    <a [href]="item.link" target="_blank" class="text-primary">
+                        {{ item.title }}
+                    </a>
+                    } @else {
+                    {{ item.title }}
+                    }
+                </h5>
             </div>
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="600">
-                <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <i class="iconify solar--smartphone-2-bold-duotone size-6 text-primary"></i>
-                </span>
-                <h5>Fully Responsive</h5>
-            </div>
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="600">
-                <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <i class="iconify solar--basketball-bold-duotone size-6 text-primary"></i>
-                </span>
-                <h5> <a href="https://icon-sets.iconify.design/" class="text-primary" target="_blank">Iconify Icon Use</a></h5>
-            </div>
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="600">
-                <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <i class="iconify solar--global-bold-duotone size-6 text-primary"></i>
-                </span>
-                <h5>Cross-browser compatible</h5>
-            </div>
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="900">
-                <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <span class="iconify solar--code-scan-bold-duotone size-6 text-primary"></span>
-                </span>
-                <h5>Easy to customize</h5>
-            </div>
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="900">
-                <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <span class="iconify solar--smile-circle-bold-duotone size-6 text-primary"></span>
-                </span>
-                <h5>Developer Friendly</h5>
-            </div>
-
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="1200">
-                <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <i class="iconify solar--code-2-bold-duotone size-6 text-primary"></i>
-                </span>
-                <h5>Clean & Easy to Understand Code</h5>
-            </div>
-
-
-            <div class="flex items-center gap-5 bg-white p-2 rounded" data-aos="fade-up" data-duration="1200">
-                <span class="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <i class="iconify solar--clipboard-check-bold-duotone size-6 text-primary"></i>
-                </span>
-                <h5>Free Updates</h5>
-            </div>
+            }
         </div>
     </div>
 </section>
-<!-- features Section End -->

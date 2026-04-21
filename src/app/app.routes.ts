@@ -5,7 +5,7 @@ export const routes: Routes = [
     path: '',
     loadComponent: () => import('./home/home').then((mod) => mod.Home),
     data: {
-      title: 'Prompt',
+      title: 'Premium Landing Pages',
     },
   },
   {
