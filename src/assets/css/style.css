@@ -28,6 +28,6 @@ File: style Css File
 @plugin "@tailwindcss/forms";
 
 /* Iconify Icons */
-@plugin "@iconify/tailwind4" {
+/* @plugin "@iconify/tailwind4" {
     prefixes: tabler, lucide, fa6-solid, fa6-regular, fa6-brands, solar;
-}
+} */
