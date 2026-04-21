@@ -20,8 +20,8 @@ File: style Css File
 
 
 /* Preline UI */
-@source "./../../../node_modules/preline/dist/*.js";
-@import "./../../../node_modules/preline/variants.css";
+@import "preline/variants.css";
+@source "preline/dist/*.js";
 
 /* Tailwind Plugin */
 @plugin "@tailwindcss/typography";

@@ -1,0 +1,277 @@
+<header id="navbar" class="@@link-color fixed top-0 inset-x-0 flex items-center z-40 w-full lg:bg-transparent bg-white transition-all py-5">
+    <div class="container">
+        <nav class="flex items-center">
+            <!-- Navbar Brand Logo -->
+            <a routerLink="/">
+                <img src="assets/images/logo-dark.png" class="h-8 logo-dark" alt="Logo Dark">
+                <img src="assets/images/logo-light.png" class="h-8 logo-light" alt="Logo Light">
+            </a>
+
+            <!-- Nevigation Menu -->
+            <div class="hidden lg:block ms-auto">
+                <ul class="navbar-nav flex gap-x-3 items-center justify-center">
+                    <!-- Home Page Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/">Home</a>
+                    </li>
+
+                    <!-- Home Page Dropdown -->
+                    <li class="nav-item">
+                        <div class="hs-dropdown [--trigger:hover] [--placement:bottom] relative">
+                            <a [routerLink]="[]" class="nav-link hs-dropdown-toggle after:absolute hover:after:-bottom-10 after:inset-0">
+                                Landing
+                                <iconify-icon icon="fa6-solid:angle-down" class="ms-2 align-middle"></iconify-icon>
+                            </a>
+
+                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 hs-dropdown-open:translate-y-0 translate-y-3 origin-center opacity-0 hidden w-96 min-w-96 border border-default-200 p-2 bg-white shadow-lg rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full">
+                                <div class="grid grid-cols-2 gap-1.5">
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/app">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-blue-600/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:smartphone-2-bold-duotone" class="text-blue-600 size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">
+                                                    App
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/saas">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-green-500/20 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:laptop-minimalistic-bold-duotone" class=" text-green-500 size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Saas Modern</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/saas2">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-primary/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:monitor-bold-duotone" class=" text-primary size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Saas Classic</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/startup">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-orange-600/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:pulse-bold-duotone" class="text-orange-600 size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Startup</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/software">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-amber-400/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:layers-bold-duotone" class="text-amber-400 size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Software</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/agency">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-black/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:bolt-circle-bold-duotone" class="text-black size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Agency</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/coworking">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-primary/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:home-wifi-bold-duotone" class="text-primary size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Coworking</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/crypto">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-orange-600/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:dollar-minimalistic-bold-duotone" class="text-orange-600 size-6"></iconify-icon>
+
+                                                </span>
+                                                <div class="flex-grow-1">Crypto</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/marketing">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-blue-500/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:letter-opened-bold-duotone" class=" text-blue-500 size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Marketing</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/home/portfolio">
+                                            <div class="flex items-center -ms-1.5">
+                                                <span class="bg-red-500/10 flex justify-center items-center w-8 h-8 shadow rounded me-3">
+                                                    <iconify-icon icon="solar:wallpaper-bold-duotone" class="text-red-500 size-6"></iconify-icon>
+                                                </span>
+                                                <div class="flex-grow-1">Portfolio</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Inner Page Dropdown -->
+                    <li class="nav-item">
+                        <div class="hs-dropdown [--trigger:hover] relative">
+                            <a [routerLink]="[]" class="nav-link hs-dropdown-toggle after:absolute hover:after:-bottom-10 after:inset-0">
+                                Pages
+                                <iconify-icon icon="fa6-solid:angle-down" class="ms-2 align-middle"></iconify-icon>
+                            </a>
+
+                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 hs-dropdown-open:translate-y-0 translate-y-3 origin-center opacity-0 hidden w-48 min-w-48 border border-default-200 p-2 bg-white shadow-lg rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                <div class="space-y-0.5">
+                                    <!-- Dropdown item -->
+                                    <div class="nav-item">
+                                        <div class="hs-dropdown [--trigger:hover] [--placement:right-start] relative">
+                                            <a [routerLink]="[]" type="button" class="nav-link hs-dropdown-toggle after:absolute after:inset-0 after:-end-10">
+                                                Account
+                                                <iconify-icon icon="fa6-solid:angle-right" class="ms-auto align-middle"></iconify-icon>
+                                            </a>
+
+                                            <div class="hs-dropdown-menu !ms-2 w-48 min-w-48 z-50 transition-[opacity,margin]  translate-y-3 duration hs-dropdown-open:translate-y-0 hs-dropdown-open:opacity-100 opacity-0 hidden  bg-white shadow-lg border border-default-200 p-2 space-y-1.5 rounded-lg mt-2" role="menu" aria-orientation="vertical" aria-labelledby="hs-split-dropleft">
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/account/dashboard">Dashboard</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/account/settings">Settings</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/account/login">Login</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/account/signup">Sign Up</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/account/forget-password">Forget
+                                                        Password</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/account/confirm">Confirm Account</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dropdown item -->
+                                    <div class="nav-item">
+                                        <div class="hs-dropdown [--trigger:hover] [--placement:right-start] relative">
+                                            <a [routerLink]="[]" type="button" class="nav-link hs-dropdown-toggle after:absolute after:inset-0 after:-end-10">
+                                                Blog
+                                                <iconify-icon icon="fa6-solid:angle-right" class="ms-auto align-middle"></iconify-icon>
+                                            </a>
+
+                                            <div class="hs-dropdown-menu !ms-2 w-48 min-w-48 z-50 transition-[opacity,margin] translate-y-3 duration hs-dropdown-open:translate-y-0 hs-dropdown-open:opacity-100 opacity-0 hidden bg-white shadow-lg border border-default-200 p-2 space-y-1.5 rounded-lg mt-2" role="menu" aria-orientation="vertical" aria-labelledby="hs-split-dropleft">
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/blog">Blog</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/blog/post">Blog Post</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="-mx-2 my-2 border-default-200">
+
+                                    <!-- Dropdown item -->
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/company">Company</a>
+                                    </div>
+
+                                    <!-- Dropdown item -->
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/career">Career</a>
+                                    </div>
+
+                                    <!-- Dropdown item -->
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/pricing">Pricing</a>
+                                    </div>
+
+                                    <!-- Dropdown item -->
+                                    <div class="nav-item">
+
+                                        <div class="hs-dropdown [--trigger:hover] [--placement:right-start] relative">
+                                            <a [routerLink]="[]" type="button" class="nav-link hs-dropdown-toggle after:absolute after:inset-0 after:-end-10">
+                                                Portfolio
+                                                <iconify-icon icon="fa6-solid:angle-right" class="ms-auto align-middle"></iconify-icon>
+                                            </a>
+
+                                            <div class="hs-dropdown-menu !ms-2 w-48 min-w-48 z-50 transition-[opacity,margin] mt-2 translate-y-3 duration hs-dropdown-open:translate-y-0 hs-dropdown-open:opacity-100 opacity-0 hidden  bg-white shadow-lg border border-default-200 p-2 space-y-1.5 rounded-lg" role="menu" aria-orientation="vertical" aria-labelledby="hs-split-dropleft">
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/portfolio/grid">Portfolio Grid</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/portfolio/masonry">Portfolio
+                                                        Masonry</a>
+                                                </div>
+
+                                                <div class="nav-item">
+                                                    <a class="nav-link" routerLink="/portfolio/item">Portfolio Item</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="-mx-2 my-2 border-default-200">
+
+                                    <!-- Dropdown item -->
+                                    <div class="nav-item">
+                                        <a class="nav-link" routerLink="/help">Help</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Contact Page Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Download Button -->
+            <div class="hidden lg:flex items-center ms-3">
+                <a href="https://1.envato.market/prompt-tailwind" target="_blank" class="bg-primary text-white px-4 py-2 rounded inline-flex items-center text-sm">Download</a>
+            </div>
+
+            <!-- Moblie Menu Toggle Button (Offcanvas Button) -->
+            <div class="lg:hidden flex items-center ms-auto px-2.5">
+                <button type="button" class="py-3 px-4 inline-flex items-center" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileMenu" data-hs-overlay="#mobileMenu">
+                    <iconify-icon icon="fa6-solid:bars" class="text-2xl text-default-500"></iconify-icon>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>

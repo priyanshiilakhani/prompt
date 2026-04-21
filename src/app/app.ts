@@ -1,12 +1,26 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Event, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { TitleService } from './services/title.service';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
+  
 export class App {
-  protected readonly title = signal('prompt');
+  constructor(
+    private router: Router,
+    private titleService: TitleService,
+  ) {}
+
+  ngOnInit() {
+    this.titleService.init();
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        setTimeout(() => window.HSStaticMethods.autoInit(), 100);
+      }
+    });
+  }
 }
