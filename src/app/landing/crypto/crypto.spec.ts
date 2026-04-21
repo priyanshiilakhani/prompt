@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Header } from './header';
 
-describe('Header', () => {
-  let component: Header;
-  let fixture: ComponentFixture<Header>;
+import { Crypto } from './crypto';
+
+describe('Crypto', () => {
+  let component: Crypto;
+  let fixture: ComponentFixture<Crypto>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Header],
+      imports: [Crypto],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Header);
+    fixture = TestBed.createComponent(Crypto);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

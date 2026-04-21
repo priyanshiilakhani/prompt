@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { imageData } from '../../data';
 register();
@@ -10,10 +10,13 @@ register();
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Hero  implements OnInit, OnDestroy  {
+  
+export class Hero {
   imageData = imageData;
 
-  texts = [
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  typewriterTexts = [
     'saas',
     'mobile app',
     'software',
@@ -25,44 +28,37 @@ export class Hero  implements OnInit, OnDestroy  {
     'marketing',
   ];
 
-  displayText = '';
-  loopNum = 0;
-  isDeleting = false;
-  period = 2000;
+  currentText: string = ''; 
+  private currentTextIndex = 0;
+  private currentCharIndex = 0;
+  private deleting = false;
 
-  typingSpeed = 150;
-  deletingSpeed = 75;
-  timeout: any;
-
-  ngOnInit() {
-    this.typeEffect();
+  ngOnInit(): void {
+    this.typeText();
   }
 
-  ngOnDestroy() {
-    clearTimeout(this.timeout);
-  }
+  private typeText(): void {
+    const text = this.typewriterTexts[this.currentTextIndex];
 
-  typeEffect() {
-    const i = this.loopNum % this.texts.length;
-    const fullText = this.texts[i];
-
-    if (this.isDeleting) {
-      this.displayText = fullText.substring(0, this.displayText.length - 1);
+    if (this.deleting) {
+      this.currentText = text.substring(0, this.currentCharIndex--);
     } else {
-      this.displayText = fullText.substring(0, this.displayText.length + 1);
+      this.currentText = text.substring(0, this.currentCharIndex++);
     }
 
-    let delay = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
+    
+    this.cdr.detectChanges();
 
-    if (!this.isDeleting && this.displayText === fullText) {
-      delay = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.displayText === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delay = 500;
+    if (!this.deleting && this.currentCharIndex > text.length) {
+      setTimeout(() => {
+        this.deleting = true;
+      }, 800);
+    } else if (this.deleting && this.currentCharIndex < 0) {
+      this.deleting = false;
+      this.currentTextIndex = (this.currentTextIndex + 1) % this.typewriterTexts.length;
+      this.currentCharIndex = 0;
     }
 
-    this.timeout = setTimeout(() => this.typeEffect(), delay);
+    setTimeout(() => this.typeText(), this.deleting ? 50 : 80);
   }
 }
