@@ -16,21 +16,11 @@
             </div>
 
             <div class="flex flex-wrap items-center justify-center lg:gap-24 gap-10 mt-14">
+                @for(item of clientData ;track $index){
                 <div>
-                    <img src="assets/images/brands/amazon.svg" class="h-8">
+                    <img [src]="item" class="h-8">
                 </div>
-                <div>
-                    <img src="assets/images/brands/google.svg" class="h-8">
-                </div>
-                <div>
-                    <img src="assets/images/brands/paypal.svg" class="h-8">
-                </div>
-                <div>
-                    <img src="assets/images/brands/spotify.svg" class="h-8">
-                </div>
-                <div>
-                    <img src="assets/images/brands/shopify.svg" class="h-8">
-                </div>
+            }                
             </div>
 
         </div>

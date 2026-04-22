@@ -1,11 +1,13 @@
 import { ChangeDetectorRef, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element/bundle';
+import { SwiperOptions } from 'swiper/types';
 import { imageData } from '../../data';
+import { SwiperDirective } from '@/app/directive/swiper-directive';
 register();
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [SwiperDirective],
   templateUrl: './hero.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -13,6 +15,30 @@ register();
   
 export class Hero {
   imageData = imageData;
+
+  swiperConfig: SwiperOptions = {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      rewind: true,
+      navigation: {
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+      },
+    };
 
   constructor(private cdr: ChangeDetectorRef) {}
 

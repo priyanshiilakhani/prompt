@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { faqData } from '../../data';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-faq',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './faq.html',
   styles: ``,
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
-export class Faq {}
+export class Faq {
+  faqData = faqData;
+}

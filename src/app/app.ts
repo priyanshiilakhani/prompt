@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Event, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TitleService } from './services/title.service';
 import * as AOS from 'aos';
@@ -10,6 +10,7 @@ import * as AOS from 'aos';
   styleUrl: './app.css',
 })
 export class App {
+  @Input() isCustomClassEnabled: boolean = false
   constructor(
     private router: Router,
     private titleService: TitleService,

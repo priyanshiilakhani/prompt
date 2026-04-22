@@ -51,36 +51,17 @@
         </div>
 
         <div id="swiper_one" class="swiper border-[10px] border-white bg-white shadow-lg rounded-md w-5/6" data-aos="fade-up" data-aos-duration="2000">
-            <swiper-container class="swiper-wrapper" autoplay="true" loop="true" space-between="30" pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" [breakpoints]='{
-                         "320": { "slidesPerView": 1 }}'>
-                <swiper-slide>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <a [routerLink]="[]" class="sm:h-14 h-10 sm:w-14 w-10 rounded-full bg-green-500 flex items-center justify-center">
-                            <iconify-icon icon="tabler:player-play-filled" height=20 width="20" lass=" text-white"></iconify-icon>
-                        </a>
-                    </div>
-                    <img src="assets/images/hero/saas1.png" alt="saas1" class="rounded-md">
-                </swiper-slide>
-
-
+            <swiper-container [config]="swiperConfig" init="false">
+                @for(item of swiperData;track $index){
                 <swiper-slide>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <a [routerLink]="[]" class="sm:h-14 h-10 sm:w-14 w-10 rounded-full bg-green-500 flex items-center justify-center">
                             <iconify-icon icon="tabler:player-play-filled" height=20 width="20" class="text-white"></iconify-icon>
                         </a>
                     </div>
-                    <img src="assets/images/hero/saas2.png" alt="saas2" class="rounded-md">
+                    <img [src]="item.image" [alt]="item.alt" class="rounded-md">
                 </swiper-slide>
-
-
-                <swiper-slide>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <a [routerLink]="[]" class="sm:h-14 h-10 sm:w-14 w-10 rounded-full bg-green-500 flex items-center justify-center">
-                            <iconify-icon icon="tabler:player-play-filled" height=20 width="20" class="text-white"></iconify-icon>
-                        </a>
-                    </div>
-                    <img src="assets/images/hero/saas3.png" alt="saas3" class="rounded-md">
-                </swiper-slide>
+                }
             </swiper-container>
         </div>
     </div>
