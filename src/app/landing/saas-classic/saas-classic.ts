@@ -13,6 +13,7 @@ import { Footer } from '@app/components/footer/footer';
   templateUrl: './saas-classic.html',
   styles: ``,
 })
+  
 export class SaasClassic {
   constructor(private rendered: Renderer2) {}
   ngOnInit(): void {
