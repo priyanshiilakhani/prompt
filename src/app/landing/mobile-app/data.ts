@@ -123,4 +123,18 @@ export const testimonialData: TestimonialType[] = [
     role: 'Senior Project Manager',
     rating: 5,
   },
+  {
+    text: `Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex, grid, etc. but just quicker to write and maintain.`,
+    image: img1,
+    name: 'John Stark',
+    role: 'Engineering Director',
+    rating: 5,
+  },
+  {
+    text: `I was bad at front-end until I discovered with Tailwind CSS. I have learnt a lot more about design and CSS itself after I started working with Tailwind. Creating web pages is 5x faster now.`,
+    image: img2,
+    name: 'Cersei Lannister',
+    role: 'Senior Project Manager',
+    rating: 5,
+  }
 ];
