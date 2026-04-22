@@ -31,7 +31,7 @@
                     <div id="swiper_one" class="swiper border-[6px] border-white bg-white 2xl:w-[140%] shadow" data-aos="fade-left" data-aos-duration="1000">
                         <swiper-container class="swiper-wrapper" [config]="swiperConfig" init="false">
                             @for (item of imageData; track $index) {
-                            <swiper-slide class="swiper-slide">
+                            <swiper-slide>
                                 <img [src]="item.image" [alt]="item.alt" class="w-full h-full rounded-md">
                             </swiper-slide>
                             }
