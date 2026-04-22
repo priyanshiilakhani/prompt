@@ -1,5 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { currentYear } from '@common/constants';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ import { RouterLink } from "@angular/router";
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Footer {
-  currentYear = new Date().getFullYear();
+  currentYear = currentYear
 
   sectionData = [
     {

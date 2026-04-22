@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { clientData } from '../../data';
 
 @Component({
-  selector: 'app-clients',
+  selector: 'landing-saas-classic-clients',
   imports: [],
   templateUrl: './clients.html',
   styles: ``,

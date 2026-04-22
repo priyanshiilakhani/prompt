@@ -1,14 +1,11 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from "@angular/router";
-import { pricingData } from '../../data';
 
 @Component({
-  selector: 'landing-saas-classic-pricing',
+  selector: 'landing-software-hero',
   imports: [RouterLink],
-  templateUrl: './pricing.html',
+  templateUrl: './hero.html',
   styles: ``,
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
-export class Pricing {
-  pricingData = pricingData
-}
+export class Hero {}

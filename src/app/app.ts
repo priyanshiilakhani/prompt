@@ -10,7 +10,6 @@ import * as AOS from 'aos';
   styleUrl: './app.css',
 })
 export class App {
-  @Input() isCustomClassEnabled: boolean = false
   constructor(
     private router: Router,
     private titleService: TitleService,

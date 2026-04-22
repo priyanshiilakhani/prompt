@@ -1,40 +1,35 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { testimonialData } from '../../data';
 import { register } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
 import { SwiperDirective } from '@/app/directive/swiper-directive';
+import { Pagination } from 'swiper/modules';
 
 register();
 
 @Component({
-  selector: 'landing-saas-classic-testimonial',
+  selector: 'landing-software-testimonial',
   imports: [SwiperDirective],
   templateUrl: './testimonial.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Testimonial {
-  testimonialData = testimonialData;
   swiperConfig: SwiperOptions = {
+    modules: [Pagination],
     slidesPerView: 1,
-    spaceBetween: 30,
     loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    rewind: true,
+    autoHeight: true,
+    spaceBetween: 30,
     navigation: {
       nextEl: '.button-next',
       prevEl: '.button-prev',
     },
     breakpoints: {
-      320: {
+      576: {
         slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
       },
     },
   };

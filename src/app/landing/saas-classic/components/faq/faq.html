@@ -11,7 +11,7 @@
         <div class="hs-accordion-group mt-14 lg:w-3/4 lg:mx-auto 2xl:w-2/3">
             @for (faq of faqData; track $index) {
             <div class="hs-accordion border border-default-300 rounded-lg" [class.active]="faq.active" [class.mt-4]="!$first">
-                <button class="hs-accordion-toggle p-5 inline-flex items-center justify-between w-full font-semibold text-left transition">
+                <button class="hs-accordion-toggle p-5 pb-6 inline-flex items-center justify-between w-full font-semibold text-left transition">
                     {{ faq.question }}
                     <iconify-icon icon="fa6-solid:angle-down" class="text-xl block transition-all hs-accordion-active:rotate-180"></iconify-icon>
                 </button>

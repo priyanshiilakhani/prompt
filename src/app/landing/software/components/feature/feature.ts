@@ -1,15 +1,15 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { accordionData, featuresData } from '../../data';
+import { featuresData, platformData } from '../../data';
 
 @Component({
-  selector: 'landing-saas-classic-feature',
+  selector: 'landing-software-feature',
   imports: [RouterLink],
   templateUrl: './feature.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Feature {
-  featuresData = featuresData;
-  accordionData = accordionData;
+  platformData = platformData;
+  featuresData=featuresData
 }

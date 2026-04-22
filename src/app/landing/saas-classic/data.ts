@@ -183,30 +183,35 @@ export const pricingData: PricingType[] = [
   },
 ];
 
+export type FaqType = {
+  question: string;
+  answer: string;
+  active: boolean;
+};
 
-export const faqData = [
+export const faqData: FaqType[] = [
   {
     question: 'Can I use this template for my client?',
     answer: `Yup, the marketplace license allows you to use this theme in any end products.
     For more information on licenses, please refer license terms on marketplace.`,
-    active: true
+    active: true,
   },
   {
     question: 'Can this theme work with WordPress?',
     answer: `No. This is a HTML template. It won't directly work with WordPress,
     though you can convert this into a WordPress compatible theme.`,
-    active: false
+    active: false,
   },
   {
     question: 'How do I get help with the theme?',
     answer: `Use our dedicated support email (support@coderthemes.com)
     to send your issues or feedback. We are here to help anytime.`,
-    active: false
+    active: false,
   },
   {
-    question: 'Will you regularly give updates of Prompt?',
+    question: 'Will you regularly give updates of Prompt ?',
     answer: `Yes, we will update the Prompt regularly. All future updates
     will be available without any cost.`,
-    active: false
-  }
+    active: false,
+  },
 ];

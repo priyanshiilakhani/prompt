@@ -7,7 +7,7 @@ import { SwiperDirective } from '@/app/directive/swiper-directive';
 register();
 
 @Component({
-  selector: 'app-hero',
+  selector: 'landing-saas-classic-hero',
   imports: [RouterLink,SwiperDirective],
   templateUrl: './hero.html',
   styles: ``,

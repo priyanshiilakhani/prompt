@@ -3,7 +3,7 @@ import { faqData } from '../../data';
 import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: 'app-faq',
+  selector: 'landing-saas-classic-faq',
   imports: [RouterLink],
   templateUrl: './faq.html',
   styles: ``,
