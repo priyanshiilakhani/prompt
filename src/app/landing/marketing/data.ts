@@ -1,3 +1,10 @@
+const avatar1 = 'assets/images/avatars/img-1.jpg';
+const avatar2 = 'assets/images/avatars/img-2.jpg';
+const avatar3 = 'assets/images/avatars/img-3.jpg';
+const google = 'assets/images/brands/google.svg';
+const amazon = 'assets/images/brands/amazon.svg';
+const lenovo = 'assets/images/brands/lenovo.svg';
+
 export type FeatureType = {
   title: string;
   desc: string;
@@ -37,30 +44,30 @@ export const featureData: FeatureType[] = [
 export const testimonialData = [
   {
     text: `It is one of the very convenient to use project manager ever! I have
-    tried many project management apps for my daily tasks, but this one is far
-    better than others. Simply loved it!`,
-    name: 'Cersei Lannister',
+        tried many project management apps for my daily tasks, but this one is far
+        better than others. Simply loved it!`,
+    name: 'John Doe',
     role: 'Senior Project Manager',
-    avatar: 'assets/images/avatars/img-1.jpg',
-    brand: 'assets/images/brands/google.svg',
+    avatar: avatar1,
+    brand: google,
   },
   {
     text: `It is one of the very convenient to use project manager ever! I have
-    tried many project management apps for my daily tasks, but this one is far
-    better than others. Simply loved it!`,
-    name: 'Cersei Lannister',
+        tried many project management apps for my daily tasks, but this one is far
+        better than others. Simply loved it!`,
+    name: 'Jane Smith',
     role: 'Senior Project Manager',
-    avatar: 'assets/images/avatars/img-2.jpg',
-    brand: 'assets/images/brands/amazon.svg',
+    avatar: avatar2,
+    brand: amazon,
   },
   {
     text: `It is one of the very convenient to use project manager ever! I have
-    tried many project management apps for my daily tasks, but this one is far
-    better than others. Simply loved it!`,
-    name: 'Cersei Lannister',
+        tried many project management apps for my daily tasks, but this one is far
+        better than others. Simply loved it!`,
+    name: 'Bob Johnson',
     role: 'Senior Project Manager',
-    avatar: 'assets/images/avatars/img-3.jpg',
-    brand: 'assets/images/brands/lenovo.svg',
+    avatar: avatar3,
+    brand: lenovo,
   },
 ];
 
