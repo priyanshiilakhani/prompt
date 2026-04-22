@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FeaturesData } from '../../data';
+import { featuresData2, featuresData } from '../../data';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,5 +11,6 @@ import { CommonModule } from '@angular/common';
 })
   
 export class Features {
-  FeaturesData = FeaturesData;
+  featuresData = featuresData;
+  featuresData2 = featuresData2;
 }

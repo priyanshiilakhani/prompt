@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { currentYear } from '@common/constants';
 
 @Component({
   selector: 'landing-mobile-app-footer',
@@ -8,4 +9,6 @@ import { RouterLink } from "@angular/router";
   styles: ``,
 })
   
-export class Footer {}
+export class Footer {
+  currentYear = currentYear;
+}

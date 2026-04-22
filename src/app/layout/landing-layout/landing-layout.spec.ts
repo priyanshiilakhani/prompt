@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MobileApp } from './mobile-app';
 
-describe('MobileApp', () => {
-  let component: MobileApp;
-  let fixture: ComponentFixture<MobileApp>;
+import { LandingLayout } from './landing-layout';
+
+describe('LandingLayout', () => {
+  let component: LandingLayout;
+  let fixture: ComponentFixture<LandingLayout>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MobileApp],
+      imports: [LandingLayout],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MobileApp);
+    fixture = TestBed.createComponent(LandingLayout);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,177 +1,41 @@
 <ul class="navbar-nav flex flex-col gap-2 hs-accordion-group">
-  <!-- Home Page Link -->
-  <li class="nav-item">
-    <a href="index.html" class="nav-link">Home</a>
-  </li>
 
-  <!-- Landing Page -->
-  <li class="nav-item hs-accordion">
-    <a href="javascript:void(0)" class="nav-link hs-accordion-toggle">
-      Landing
-      <i
-        class="iconify fa6-solid--angle-down ms-auto align-middle transition-all hs-accordion-active:rotate-180"
-      ></i>
-    </a>
+  @for (menu of MENU_DATA; track $index) {
 
-    <ul
-      class="hs-accordion-content ps-4 hidden overflow-hidden transition-[height] duration-300 space-y-2"
-    >
-      <li class="nav-item mt-2">
-        <a class="nav-link" href="home-app.html">App</a>
-      </li>
-
+    <!-- SIMPLE LINK -->
+    @if (!menu.children) {
       <li class="nav-item">
-        <a class="nav-link" href="home-saas.html">Saas Modern</a>
+        <a class="nav-link" [routerLink]="menu.url">
+          {{ menu.label }}
+        </a>
       </li>
+    }
 
-      <li class="nav-item">
-        <a class="nav-link" href="home-saas2.html">Saas Classic</a>
+    <!-- ACCORDION -->
+    @if (menu.children) {
+      <li class="nav-item hs-accordion">
+        <a [routerLink]="[]" class="nav-link hs-accordion-toggle">
+          {{ menu.label }}
+          <iconify-icon
+            icon="fa6-solid:angle-down"
+            class="ms-auto align-middle transition-all hs-accordion-active:rotate-180"
+          ></iconify-icon>
+        </a>
+
+        <ul class="hs-accordion-content ps-4 hidden overflow-hidden transition-[height] duration-300 space-y-2">
+
+          @for (child of menu.children; track $index) {
+            <li class="nav-item mt-2">
+              <a class="nav-link" [routerLink]="child.url">
+                {{ child.label }}
+              </a>
+            </li>
+          }
+
+        </ul>
       </li>
+    }
 
-      <li class="nav-item">
-        <a class="nav-link" href="home-startup.html">Startup</a>
-      </li>
+  }
 
-      <li class="nav-item">
-        <a class="nav-link" href="home-software.html">Software</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="home-agency.html">Agency</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="home-coworking.html">Coworking</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="home-crypto.html">Crypto</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="home-marketing.html">Marketing</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="home-portfolio.html">Portfolio</a>
-      </li>
-    </ul>
-  </li>
-
-  <!-- Inner Page -->
-  <li class="nav-item hs-accordion">
-    <a href="javascript:void(0)" class="nav-link hs-accordion-toggle">
-      Pages
-      <i
-        class="iconify fa6-solid--angle-down ms-auto align-middle transition-all hs-accordion-active:rotate-180"
-      ></i>
-    </a>
-
-    <ul
-      class="hs-accordion-content ps-4 hidden overflow-hidden transition-[height] duration-300 space-y-2"
-    >
-      <li class="nav-item mt-2">
-        <a class="nav-link" href="company.html">Company</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="career.html">Career</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="pricing.html">Pricing</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="help.html">Help</a>
-      </li>
-    </ul>
-  </li>
-
-  <!-- Blog Page -->
-  <li class="nav-item hs-accordion">
-    <a href="javascript:void(0)" class="nav-link hs-accordion-toggle">
-      Blog Page
-      <i
-        class="iconify fa6-solid--angle-down ms-auto align-middle transition-all hs-accordion-active:rotate-180"
-      ></i>
-    </a>
-
-    <ul
-      class="hs-accordion-content ps-4 hidden overflow-hidden transition-[height] duration-300 space-y-2"
-    >
-      <li class="nav-item mt-2">
-        <a class="nav-link" href="blog.html">Blog</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="blog-post.html">Blog Post</a>
-      </li>
-    </ul>
-  </li>
-
-  <!-- Portfolio Page -->
-  <li class="nav-item hs-accordion">
-    <a href="javascript:void(0)" class="nav-link hs-accordion-toggle">
-      Portfolio
-      <i
-        class="iconify fa6-solid--angle-down ms-auto align-middle transition-all hs-accordion-active:rotate-180"
-      ></i>
-    </a>
-
-    <ul
-      class="hs-accordion-content ps-4 hidden overflow-hidden transition-[height] duration-300 space-y-2"
-    >
-      <li class="nav-item mt-2">
-        <a class="nav-link" href="portfolio-grid.html">Portfolio Grid</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="portfolio-masonry.html">Portfolio Masonry</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="portfolio-item.html">Portfolio Item</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="account-confirm.html">Confirm Account</a>
-      </li>
-    </ul>
-  </li>
-
-  <!-- Auth Page -->
-  <li class="nav-item hs-accordion">
-    <a href="javascript:void(0)" class="nav-link hs-accordion-toggle">
-      Account
-      <i
-        class="iconify fa6-solid--angle-down ms-auto align-middle transition-all hs-accordion-active:rotate-180"
-      ></i>
-    </a>
-
-    <ul
-      class="hs-accordion-content ps-4 hidden overflow-hidden transition-[height] duration-300 space-y-2"
-    >
-      <li class="nav-item mt-2">
-        <a class="nav-link" href="account-login.html">Login</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="account-signup.html">Sign Up</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="account-forget-password.html">Forget Password</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="account-confirm.html">Confirm Account</a>
-      </li>
-    </ul>
-  </li>
-
-  <!-- Contact Page Link -->
-  <li class="nav-item">
-    <a class="nav-link" href="contact.html">Contact us</a>
-  </li>
 </ul>

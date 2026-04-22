@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterLink } from "@angular/router";
+import { MENU_DATA } from './data';
 
 @Component({
   selector: 'app-mobile-nav',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './mobile-nav.html',
   styles: ``,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
   
-export class MobileNav {}
+export class MobileNav {
+  MENU_DATA = MENU_DATA;
+}

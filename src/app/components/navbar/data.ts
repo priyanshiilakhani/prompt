@@ -1,113 +1,94 @@
-type NavLink = {
-  label: string;
-  route: string;
+export type MenuItemType = {
+  label?: string;
+  url?: string;
+  type?: 'link' | 'dropdown' | 'mega';
+  badge?: string;
+  icon?: string;
+  color?: string;
+  bg?: string;
+  children?: MenuItemType[];
+  isDivider?: boolean;
 };
 
-type NavDivider = {
-  divider: true;
-};
-
-type NavDropdown = {
-  label: string;
-  children: NavChild[];
-};
-
-type NavMegaItem = {
-  label: string;
-  route: string;
-  icon: string;
-  color: string;
-  textColor: string;
-};
-
-type NavChild = NavLink | NavDivider | NavDropdown;
-
-export const NAVBAR_DATA: {
-  type: string;
-  label: string;
-  route?: string;
-  mega?: boolean;
-  children?: NavMegaItem[] | NavChild[];
-}[] = [
+export const menuItems: MenuItemType[] = [
   {
     type: 'link',
     label: 'Home',
-    route: '/',
+    url: '/',
   },
   {
-    type: 'dropdown',
+    type: 'mega',
     label: 'Landing',
-    mega: true,
     children: [
       {
         label: 'App',
-        route: '/home/app',
+        url: '/home/app',
         icon: 'solar:smartphone-2-bold-duotone',
-        color: 'blue-600/10',
-        textColor: 'text-blue-600',
+        color: 'text-blue-600',
+        bg: 'bg-blue-600/10',
       },
       {
         label: 'Saas Modern',
-        route: '/home/saas',
+        url: '/home/saas',
         icon: 'solar:laptop-minimalistic-bold-duotone',
-        color: 'green-500/20',
-        textColor: 'text-green-500',
+        color: 'text-green-500',
+        bg: 'bg-green-500/20',
       },
       {
         label: 'Saas Classic',
-        route: '/home/saas2',
+        url: '/home/saas2',
         icon: 'solar:monitor-bold-duotone',
-        color: 'primary/10',
-        textColor: 'text-primary',
+        color: 'text-primary',
+        bg: 'bg-primary/10',
       },
       {
         label: 'Startup',
-        route: '/home/startup',
+        url: '/home/startup',
         icon: 'solar:pulse-bold-duotone',
-        color: 'orange-600/10',
-        textColor: 'text-orange-600',
+        color: 'text-orange-600',
+        bg: 'bg-orange-600/10',
       },
       {
         label: 'Software',
-        route: '/home/software',
+        url: '/home/software',
         icon: 'solar:layers-bold-duotone',
-        color: 'amber-400/10',
-        textColor: 'text-amber-400',
+        color: 'text-amber-400',
+        bg: 'bg-amber-400/10',
       },
       {
         label: 'Agency',
-        route: '/home/agency',
+        url: '/home/agency',
         icon: 'solar:bolt-circle-bold-duotone',
-        color: 'black/10',
-        textColor: 'text-black',
+        color: 'text-black',
+        bg: 'bg-black/10',
       },
       {
         label: 'Coworking',
-        route: '/home/coworking',
+        url: '/home/coworking',
         icon: 'solar:home-wifi-bold-duotone',
-        color: 'primary/10',
-        textColor: 'text-primary',
+        color: 'text-primary',
+        bg: 'bg-primary/10',
       },
       {
         label: 'Crypto',
-        route: '/home/crypto',
+        url: '/home/crypto',
         icon: 'solar:dollar-minimalistic-bold-duotone',
-        color: 'orange-600/10',
-        textColor: 'text-orange-600',
+        color: 'text-orange-600',
+        bg: 'bg-orange-600/10',
       },
       {
         label: 'Marketing',
-        route: '/home/marketing',
+        url: '/home/marketing',
         icon: 'solar:letter-opened-bold-duotone',
-        color: 'blue-500/10',
-        textColor: 'text-blue-500',
+        color: 'text-blue-500',
+        bg: 'bg-blue-500/10',
       },
       {
         label: 'Portfolio',
-        route: '/home/portfolio',
+        url: '/home/portfolio',
         icon: 'solar:wallpaper-bold-duotone',
-        color: 'red-500/10',
-        textColor: 'text-red-500',
+        color: 'text-red-500',
+        bg: 'bg-red-500/10',
       },
     ],
   },
@@ -118,40 +99,40 @@ export const NAVBAR_DATA: {
       {
         label: 'Account',
         children: [
-          { label: 'Dashboard', route: '/account/dashboard' },
-          { label: 'Settings', route: '/account/settings' },
-          { label: 'Login', route: '/account/login' },
-          { label: 'Sign Up', route: '/account/signup' },
-          { label: 'Forget Password', route: '/account/forget-password' },
-          { label: 'Confirm Account', route: '/account/confirm' },
+          { label: 'Dashboard', url: '/account/dashboard' },
+          { label: 'Settings', url: '/account/settings' },
+          { label: 'Login', url: '/account/login' },
+          { label: 'Sign Up', url: '/account/signup' },
+          { label: 'Forget Password', url: '/account/forget-password' },
+          { label: 'Confirm Account', url: '/account/confirm' },
         ],
       },
       {
         label: 'Blog',
         children: [
-          { label: 'Blog', route: '/blog' },
-          { label: 'Blog Post', route: '/blog/post' },
+          { label: 'Blog', url: '/blog' },
+          { label: 'Blog Post', url: '/blog/post' },
         ],
       },
-      { divider: true },
-      { label: 'Company', route: '/company' },
-      { label: 'Career', route: '/career' },
-      { label: 'Pricing', route: '/pricing' },
+      { isDivider: true },
+      { label: 'Company', url: '/company' },
+      { label: 'Career', url: '/career' },
+      { label: 'Pricing', url: '/pricing' },
       {
         label: 'Portfolio',
         children: [
-          { label: 'Portfolio Grid', route: '/portfolio/grid' },
-          { label: 'Portfolio Masonry', route: '/portfolio/masonry' },
-          { label: 'Portfolio Item', route: '/portfolio/item' },
+          { label: 'Portfolio Grid', url: '/portfolio/grid' },
+          { label: 'Portfolio Masonry', url: '/portfolio/masonry' },
+          { label: 'Portfolio Item', url: '/portfolio/item' },
         ],
       },
-      { divider: true },
-      { label: 'Help', route: '/help' },
+      { isDivider: true },
+      { label: 'Help', url: '/help' },
     ],
   },
   {
     type: 'link',
     label: 'Contact us',
-    route: '/contact',
+    url: '/contact',
   },
 ];

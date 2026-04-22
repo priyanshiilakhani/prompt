@@ -1,3 +1,4 @@
+import { SwiperDirective } from '@/app/directive/swiper-directive';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { register } from 'swiper/element';
@@ -7,7 +8,7 @@ register();
 
 @Component({
   selector: 'landing-mobile-app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, SwiperDirective],
   templateUrl: './home.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
