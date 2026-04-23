@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AdminFooter } from './admin-footer';
 
 describe('AdminFooter', () => {
