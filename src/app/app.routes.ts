@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LandingLayout } from './layout/landing-layout/landing-layout';
+import { AdminLayout } from './layout/admin-layout/admin-layout';
 
 export const routes: Routes = [
   {
@@ -15,7 +16,8 @@ export const routes: Routes = [
     loadChildren: () => import('./landing/landing.route').then((mod) => mod.LANDING_ROUTES),
   },
   {
-    path: '',
+    path: 'account',
+    component: AdminLayout,
     loadChildren: () => import('./admin/admin.route').then((mod) => mod.ADMIN_ROUTES),
   },
 ];

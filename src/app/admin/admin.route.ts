@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 export const ADMIN_ROUTES: Route[] = [
   {
-    path: 'account/dashboard',
+    path: 'dashboard',
     loadComponent: () =>
       import('./dashboard/dashboard').then(
         (mod) => mod.Dashboard,
@@ -10,7 +10,7 @@ export const ADMIN_ROUTES: Route[] = [
     data: { title: 'Dashboard' },
   },
   {
-    path: 'account/settings',
+    path: 'settings',
     loadComponent: () =>
       import('./settings/settings').then(
         (mod) => mod.Settings,
