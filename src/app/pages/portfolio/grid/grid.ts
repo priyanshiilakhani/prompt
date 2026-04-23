@@ -2,10 +2,11 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { portfolioData } from './data';
+import { GlightboxDirective } from "@/app/directive/glightbox.directive";
 
 @Component({
   selector: 'app-grid',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, GlightboxDirective],
   templateUrl: './grid.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
