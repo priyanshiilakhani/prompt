@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LandingLayout } from './layout/landing-layout/landing-layout';
 import { AdminLayout } from './layout/admin-layout/admin-layout';
+import { PagesLayout } from './layout/pages-layout/pages-layout';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,15 @@ export const routes: Routes = [
     path: 'account',
     component: AdminLayout,
     loadChildren: () => import('./admin/admin.route').then((mod) => mod.ADMIN_ROUTES),
+  },
+  {
+    path: '',
+    component: PagesLayout,
+    loadChildren: () => import('./pages/pages.route').then((mod) => mod.PAGES_ROUTES),
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/blog/blog.route').then((mod) => mod.BLOG_ROUTES),
   },
   {
     path: 'account',

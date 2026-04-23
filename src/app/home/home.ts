@@ -12,4 +12,5 @@ import { BackToTop } from '../components/back-to-top/back-to-top';
   templateUrl: './home.html',
   styles: ``,
 })
+  
 export class Home {}

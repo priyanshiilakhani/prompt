@@ -9,6 +9,7 @@ import * as AOS from 'aos';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
+  
 export class App {
   @Input() isCustomClassEnabled: boolean = false;
   @ViewChild('el') el!: ElementRef;
@@ -39,7 +40,7 @@ export class App {
   }
 
   ngOnDestroy() {
-    this.isCustomClassEnabled = false; // Set the value accordingly
+    this.isCustomClassEnabled = false; 
     this.updateBodyClass();
   }
 }

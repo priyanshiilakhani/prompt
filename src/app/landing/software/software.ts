@@ -14,5 +14,6 @@ import { App } from "@/app/app";
   templateUrl: './software.html',
   styles: ``,
 })
+  
 export class Software {
 }
