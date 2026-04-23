@@ -20,4 +20,8 @@ export const routes: Routes = [
     component: AdminLayout,
     loadChildren: () => import('./admin/admin.route').then((mod) => mod.ADMIN_ROUTES),
   },
+  {
+    path: 'account',
+    loadChildren: () => import('./auth/auth.route').then((mod) => mod.AUTH_ROUTES),
+  },
 ];

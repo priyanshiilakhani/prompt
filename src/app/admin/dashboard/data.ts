@@ -1,3 +1,6 @@
+const avatar8 = 'assets/images/avatars/img-8.jpg';
+const avatar5 = 'assets/images/avatars/img-5.jpg';
+
 export type ProjectType = {
   date: string;
   title: string;
@@ -18,7 +21,7 @@ export const projectData: ProjectType[] = [
     description: 'Update shreyu with modern and latest trends...',
     progress: 75,
     progressColor: 'bg-green-500',
-    members: ['assets/images/avatars/img-8.jpg', 'assets/images/avatars/img-5.jpg'],
+    members: [avatar8, avatar5],
   },
   {
     date: 'Aug 10, 2020',
@@ -28,7 +31,7 @@ export const projectData: ProjectType[] = [
     description: 'Plan new features and functionality for prompt...',
     progress: 50,
     progressColor: 'bg-red-500',
-    members: ['assets/images/avatars/img-8.jpg', 'assets/images/avatars/img-5.jpg'],
+    members: [avatar8, avatar5],
   },
   {
     date: 'Aug 11, 2020',
@@ -38,7 +41,7 @@ export const projectData: ProjectType[] = [
     description: 'Update shreyu with modern and latest trends...',
     progress: 60,
     progressColor: 'bg-amber-500',
-    members: ['assets/images/avatars/img-8.jpg', 'assets/images/avatars/img-5.jpg'],
+    members: [avatar8, avatar5],
   },
 ];
 
