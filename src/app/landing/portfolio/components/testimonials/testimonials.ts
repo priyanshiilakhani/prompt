@@ -3,6 +3,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element';
 import { Navigation, Pagination } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
+import { testimonialData } from '../../data';
 
 register();
 
@@ -15,6 +16,7 @@ register();
 })
   
 export class Testimonials {
+  testimonialData = testimonialData;
   swiperConfig: SwiperOptions = {
     modules: [Navigation, Pagination],
     slidesPerView: 1,

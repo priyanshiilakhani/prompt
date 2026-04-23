@@ -1,3 +1,10 @@
+const agency1 = 'assets/images/features/agency1.jpg'; 
+const agency2 = 'assets/images/features/agency2.jpg';
+const img1 = 'assets/images/avatars/img-1.jpg';
+const img2 = 'assets/images/avatars/img-2.jpg';
+const amazon = 'assets/images/brands/amazon.svg';
+const google = 'assets/images/brands/google.svg';
+
 export type ServiceType = {
   icon: string;
   title: string;
@@ -45,12 +52,12 @@ export const projectCardData: ProjectType[] = [
       {
         title: 'Project',
         category: 'Branding, Interaction, Web Design',
-        image: 'assets/images/features/agency1.jpg',
+        image: agency1,
       },
       {
         title: 'Project 2',
         category: 'Branding, Web Design & Development',
-        image: 'assets/images/features/agency2.jpg',
+        image: agency2,
       },
     ],
   },
@@ -60,13 +67,66 @@ export const projectCardData: ProjectType[] = [
       {
         title: 'Project 3',
         category: 'Branding, Interaction, Web Design',
-        image: 'assets/images/features/agency2.jpg',
+        image: agency2,
       },
       {
         title: 'Project 4',
         category: 'Branding, Web Design & Development',
-        image: 'assets/images/features/agency1.jpg',
+        image: agency1,
       },
     ],
   },
+];
+
+export type TestimonialType = {
+  client: {
+    name: string;
+    role: string;
+    image: string;
+  };
+  description: string;
+  image: string;
+};
+
+export const testimonialData: TestimonialType[] = [
+  {
+    client: {
+      name: 'John Stark',
+      role: 'Engineering Director',
+      image: img1,
+    },
+    description:
+      'Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex, grid, etc. but just quicker to write and maintain.',
+    image: amazon,
+  },
+  {
+    client: {
+      name: 'Cersei Lannister',
+      role: 'Senior Project Manager',
+      image: img2,
+    },
+    description:
+      'I was bad at front-end until I discovered with Tailwind CSS. I have learnt a lot more about design and CSS itself after I started working with Tailwind. Creating web pages is 5x faster now.',
+    image: google,
+  },
+  {
+    client: {
+      name: 'John Stark',
+      role: 'Engineering Director',
+      image: img1,
+    },
+    description:
+      'Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex, grid, etc. but just quicker to write and maintain.',
+    image: amazon,
+  },
+  {
+    client: {
+      name: 'Cersei Lannister',
+      role: 'Senior Project Manager',
+      image: img2,
+    },
+    description:
+      'I was bad at front-end until I discovered with Tailwind CSS. I have learnt a lot more about design and CSS itself after I started working with Tailwind. Creating web pages is 5x faster now.',
+    image: google,
+  }
 ];
