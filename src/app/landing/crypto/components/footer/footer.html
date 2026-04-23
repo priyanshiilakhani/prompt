@@ -2,7 +2,7 @@
     <div class="container">
         <div class="grid xl:grid-cols-5 gap-6 py-12">
             <div class="col-span-2">
-                <a href="index.html">
+                <a routerLink="/">
                     <img src="assets/images/logo-dark.png" class="h-8">
                 </a>
                 <p class="text-sm text-default-500/80 mt-5 lg:w-4/5">A seamless, flexible and diverse platform to
@@ -10,43 +10,16 @@
             </div>
             <div class="xl:col-span-3 col-span-4">
                 <div class="flex flex-col sm:flex-row gap-6 flex-wrap justify-between">
+                    @for (item of sectionData; track $index) {
                     <div>
                         <div class="flex flex-col gap-3">
-                            <h5 class="mb-3 uppercase">Platform</h5>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Demo</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Pricing</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Integrations</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Status</a></div>
+                            <h5 class="mb-3 uppercase">{{ item.title }}</h5>
+                            @for (link of item.links; track $index) {
+                            <div class="text-default-500/80"><a [routerLink]="[]">{{link}}</a></div>
+                            }
                         </div>
                     </div>
-                    <div>
-                        <div class="flex flex-col gap-3">
-                            <h5 class="mb-3 uppercase">Knowledge Base</h5>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Blog</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Help Center</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Sales Tools catalog</a>
-                            </div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">API</a></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex flex-col gap-3">
-                            <h5 class="mb-3 uppercase">Company</h5>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">About us</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Career</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Contact Us</a></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex flex-col gap-3">
-                            <h5 class="mb-3 uppercase">Legal</h5>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Usage Policy</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Privacy Policy</a></div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Terms of Service</a>
-                            </div>
-                            <div class="text-default-500/80"><a href="javascript:void(0);">Trust</a></div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
@@ -54,26 +27,26 @@
             <div class="grid sm:grid-cols-2 text-center sm:text-start gap-6">
                 <div>
                     <p class="text-default-500/80 text-sm">
-                        <script>document.write(new Date().getFullYear())</script>© Prompt. All rights reserved.
+                        {{ currentYear }}© Prompt. All rights reserved.
                         Crafted
-                        by <a href="#" class="text-default-800 hover:text-primary transition-all">Coderthemes</a>
+                        by <a [routerLink]="[]" class="text-default-800 hover:text-primary transition-all">Coderthemes</a>
                     </p>
                 </div>
 
                 <div class="flex justify-center sm:justify-end gap-7">
                     <span>
-                        <a href="#">
-                            <i class="iconify tabler--brand-facebook size-5 hover:text-primary transition-all"></i>
+                        <a [routerLink]="[]">
+                            <iconify-icon icon="tabler:brand-facebook" class="hover:text-primary transition-all" height="20" width="20"></iconify-icon>
                         </a>
                     </span>
                     <span>
-                        <a href="#">
-                            <i class="iconify tabler--brand-x size-5 hover:text-primary transition-all"></i>
+                        <a [routerLink]="[]">
+                            <iconify-icon icon="tabler:brand-x" class="hover:text-primary transition-all" height="20" width="20"></iconify-icon>
                         </a>
                     </span>
                     <span>
-                        <a href="#">
-                            <i class="iconify tabler--brand-instagram size-5 hover:text-primary transition-all"></i>
+                        <a [routerLink]="[]">
+                            <iconify-icon icon="tabler:brand-instagram" class="hover:text-primary transition-all" height="20" width="20"></iconify-icon>
                         </a>
                     </span>
                 </div>

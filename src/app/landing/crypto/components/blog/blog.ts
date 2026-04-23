@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { blogData } from '../../data';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'landing-crypto-blog',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './blog.html',
   styles: ``,
 })
-export class Blog {}
+export class Blog {
+  blogData = blogData;
+}

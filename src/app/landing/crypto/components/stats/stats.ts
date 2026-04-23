@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { statsData } from '../../data';
 
 @Component({
   selector: 'landing-crypto-stats',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './stats.html',
   styles: ``,
 })
-export class Stats {}
+export class Stats {
+  statsData = statsData;
+}

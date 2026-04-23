@@ -8,29 +8,14 @@
             <h1 class="text-3xl font-medium my-3">Prompt In Numbers</h1>
         </div>
         <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 mt-12">
+            @for(item of statsData ;track $index){
             <div class="text-center">
-                <span class="text-3xl">$50M+</span>
-                <p class="font-semibold mt-3">Value transacted</p>
-                <p class="text-default-800 mt-1">in overall sell/buy transactions</p>
+                <span class="text-3xl">{{item.value}}</span>
+                <p class="font-semibold mt-3">{{item.title}}</p>
+                <p class="text-default-800 mt-1">{{item.description}}</p>
             </div>
+            }
 
-            <div class="text-center">
-                <span class="text-3xl">2.1M+</span>
-                <p class="font-semibold mt-3">Transactions Processed</p>
-                <p class="text-default-800 mt-1">across 10+ countries</p>
-            </div>
-
-            <div class="text-center">
-                <span class="text-3xl">2M+</span>
-                <p class="font-semibold mt-3">Satisfied Processed</p>
-                <p class="text-default-800 mt-1">across 100+ locations</p>
-            </div>
-
-            <div class="text-center">
-                <span class="text-3xl">4.5</span>
-                <p class="font-semibold mt-3">Star App Rating</p>
-                <p class="text-default-800 mt-1">on google play & apple store</p>
-            </div>
         </div>
     </div>
 </section>
