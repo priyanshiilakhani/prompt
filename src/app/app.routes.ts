@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LandingLayout } from './layout/landing-layout/landing-layout';
 import { AdminLayout } from './layout/admin-layout/admin-layout';
 import { PagesLayout } from './layout/pages-layout/pages-layout';
+import { Contact } from './contact/contact';
 
 export const routes: Routes = [
   {
@@ -33,5 +34,10 @@ export const routes: Routes = [
   {
     path: 'account',
     loadChildren: () => import('./auth/auth.route').then((mod) => mod.AUTH_ROUTES),
+  },
+  {
+    path: 'contact',
+    component: Contact,
+    data: { title: 'Contact' },
   },
 ];

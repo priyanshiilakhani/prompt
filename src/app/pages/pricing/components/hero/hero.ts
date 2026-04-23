@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './hero.html',
   styles: ``,
 })
+  
 export class Hero {}

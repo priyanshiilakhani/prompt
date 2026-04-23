@@ -35,10 +35,5 @@ export const PAGES_ROUTES: Route[] = [
     path: 'portfolio/item',
     loadComponent: () => import('./portfolio/item/item').then((mod) => mod.Item),
     data: { title: 'item' },
-  },
-  {
-    path: 'contact',
-    loadComponent: () => import('./contact/contact').then((mod) => mod.Contact),
-    data: { title: 'Contact' },
-  },
+  }
 ];
