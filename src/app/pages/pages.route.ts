@@ -22,17 +22,17 @@ export const PAGES_ROUTES: Route[] = [
     data: { title: 'Help' },
   },
   {
-    path: 'portfolio-grid',
+    path: 'portfolio/grid',
     loadComponent: () => import('./portfolio/grid/grid').then((mod) => mod.Grid),
     data: { title: 'Help' },
   },
   {
-    path: 'portfolio-masonry',
+    path: 'portfolio/masonry',
     loadComponent: () => import('./portfolio/masonry/masonry').then((mod) => mod.Masonry),
     data: { title: 'Masonry' },
   },
   {
-    path: 'portfolio-item',
+    path: 'portfolio/item',
     loadComponent: () => import('./portfolio/item/item').then((mod) => mod.Item),
     data: { title: 'item' },
   },
