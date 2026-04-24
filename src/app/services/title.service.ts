@@ -30,7 +30,8 @@ export class TitleService {
 
     if (route.snapshot.data['title']) {
       this.titleService.setTitle(
-        route.snapshot.data['title'] + ' - Tailwind CSS Multipurpose One Page Landing Template',
+        route.snapshot.data['title'] +
+          ' | Prompt - Tailwind CSS Multipurpose Landing Page Template',
       );
     }
   }

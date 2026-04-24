@@ -38,6 +38,6 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: Contact,
-    data: { title: 'Contact' },
+    data: { title: 'Contact Us' },
   },
 ];

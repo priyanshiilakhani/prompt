@@ -5,10 +5,11 @@ import { Home } from "./components/home/home";
 import { Navigation } from "./components/navigation/navigation";
 import { Comments } from "./components/comments/comments";
 import { Footer } from "./components/footer/footer";
+import { App } from "@/app/app";
 
 @Component({
   selector: 'app-blog-post',
-  imports: [Header, BackToTop, Home, Navigation, Comments, Footer],
+  imports: [Header, BackToTop, Home, Navigation, Comments, Footer, App],
   templateUrl: './blog-post.html',
   styles: ``,
 })

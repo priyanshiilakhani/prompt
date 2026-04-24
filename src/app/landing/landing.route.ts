@@ -26,41 +26,41 @@ export const LANDING_ROUTES: Route[] = [
   {
     path: 'saas2',
     component: SaasClassic,
-    data: { title: 'SaasClassic Application Landing Page' },
+    data: { title: 'Saas Application Landing Page' },
   },
   {
     path: 'startup',
     component: Startup,
-    data: { title: 'Startup Application Landing Page' },
+    data: { title: 'Startup Landing Page' },
   },
   {
     path: 'software',
     component: Software,
-    data: { title: 'Software Application Landing Page' },
+    data: { title: 'Software Landing Page' },
   },
   {
     path: 'agency',
     component: Agency,
-    data: { title: 'Agency Application Landing Page' },
+    data: { title: 'A Landing Page for an Agency' },
   },
   {
     path: 'coworking',
     component: CoWorking,
-    data: { title: 'Co-Working Application Landing Page' },
+    data: { title: 'Co-Working Space Landing Page' },
   },
   {
     path: 'crypto',
     component: Crypto,
-    data: { title: 'Crypto Application Landing Page' },
+    data: { title: 'Crypto Landing Page' },
   },
   {
     path: 'marketing',
     component: Marketing,
-    data: { title: 'Marketing Application Landing Page' },
+    data: { title: 'Marketing Landing Page' },
   },
   {
     path: 'portfolio',
     component: Portfolio,
-    data: { title: 'Portfolio Application Landing Page' },
+    data: { title: 'Portfolio Landing Page' },
   },
 ];
