@@ -100,3 +100,37 @@ export const profileData: ProfileType[] = [
     icon: 'tabler:lock-open',
   },
 ];
+
+export type MobileMenuType = {
+  label: string;
+  icon: string;
+  link: string;
+};
+
+export const mobileMenuData: MobileMenuType[] = [
+  {
+    label: 'Home',
+    icon: 'solar:widget-5-bold-duotone',
+    link: '/account/dashboard',
+  },
+  {
+    label: 'Projects',
+    icon: 'solar:folder-2-bold-duotone',
+    link: '/account/dashboard',
+  },
+  {
+    label: 'Tasks',
+    icon: 'solar:hamburger-menu-bold-duotone',
+    link: '/account/dashboard',
+  },
+  {
+    label: 'Reports',
+    icon: 'solar:chart-square-bold-duotone',
+    link: '/account/dashboard',
+  },
+  {
+    label: 'Settings',
+    icon: 'solar:tuning-square-2-bold-duotone',
+    link: '/account/settings',
+  },
+];
