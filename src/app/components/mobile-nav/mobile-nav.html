@@ -5,7 +5,7 @@
     <!-- SIMPLE LINK -->
     @if (!menu.children) {
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="menu.url">
+        <a class="nav-link" [routerLink]="menu.url" (click)="closeMenu()">
           {{ menu.label }}
         </a>
       </li>
@@ -26,7 +26,7 @@
 
           @for (child of menu.children; track $index) {
             <li class="nav-item mt-2">
-              <a class="nav-link" [routerLink]="child.url">
+              <a class="nav-link" [routerLink]="child.url"  (click)="closeMenu()">
                 {{ child.label }}
               </a>
             </li>
