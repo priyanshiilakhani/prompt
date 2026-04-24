@@ -10,9 +10,25 @@ import { adminNavData, notificationData, profileData } from './data';
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-  
+
 export class AdminHeader {
   adminNavData = adminNavData;
   notificationData = notificationData;
   profileData = profileData;
+  closeMenu() {
+    const overlay = document.getElementById('adminMobileMenu');
+
+    if (overlay) {
+      // close panel
+      overlay.classList.add('hidden');
+      overlay.classList.remove('hs-overlay-open');
+      overlay.classList.remove('translate-x-0');
+    }
+
+    // remove body scroll lock
+    document.body.classList.remove('hs-overlay-body-open');
+
+    // 🔥 remove ALL backdrops (important)
+    document.querySelectorAll('.hs-overlay-backdrop').forEach((el) => el.remove());
+  }
 }
