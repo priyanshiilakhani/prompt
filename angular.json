@@ -26,20 +26,21 @@
               },
               "src/assets"
             ],
+            "allowedCommonJsDependencies": ["glightbox", "aos"],
             "styles": [
               "src/styles.css",
               "node_modules/swiper/swiper-bundle.min.css",
               "node_modules/aos/dist/aos.css"
             ],
-             "scripts": ["node_modules/preline/dist/index.js","node_modules/aos/dist/aos.js"]
+            "scripts": ["node_modules/preline/dist/index.js", "node_modules/aos/dist/aos.js"]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",

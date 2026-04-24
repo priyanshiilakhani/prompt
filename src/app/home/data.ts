@@ -148,7 +148,7 @@ export const demoData: DemoType[] = [
   },
   {
     label: 'Blog Post',
-    link: '/blog-post',
+    link: '/blog/post',
     image: blogpost,
   },
   {
